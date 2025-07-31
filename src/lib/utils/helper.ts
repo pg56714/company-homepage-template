@@ -7,7 +7,7 @@ import type { BreakpointType } from "../types";
 const fullConfig = resolveConfig(tailwindConfig);
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+	return twMerge(clsx(inputs));
 }
 
 /**
@@ -17,9 +17,9 @@ export function cn(...inputs: ClassValue[]) {
  */
 
 export const getBreakpointsWidth = (breakpoint: BreakpointType) => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  return +fullConfig?.theme?.screens[breakpoint].slice(0, -2);
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	return +fullConfig?.theme?.screens[breakpoint].slice(0, -2);
 };
 
 /**
@@ -29,8 +29,8 @@ export const getBreakpointsWidth = (breakpoint: BreakpointType) => {
 
 let idCounter = 0;
 export const getId = () => {
-  idCounter += 1;
-  return `id${idCounter}`;
+	idCounter += 1;
+	return `id${idCounter}`;
 };
 
 /**
@@ -40,7 +40,7 @@ export const getId = () => {
  */
 
 export const removeKeys = <T>(object: T, keys: Array<keyof T>) => {
-  for (const field of keys) {
-    delete object[field];
-  }
+	for (const field of keys) {
+		delete object[field];
+	}
 };
