@@ -1,6 +1,6 @@
+import { Icon } from "@iconify/react";
 import { iconMap } from "@/lib/content/icons";
 import type { SocialLinkType } from "@/lib/types";
-import { Icon } from "@iconify/react";
 import SocialLink from "./SocialLink";
 
 const SocialIcon = ({ icon, url }: SocialLinkType) => {

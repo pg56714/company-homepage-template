@@ -1,4 +1,5 @@
 import type { SkillType } from "@/lib/types/sections";
+
 // import Image from "next/image";
 // const SkillsCard = ({ icon, title, desc }: SkillType) => {
 //     return (
@@ -18,11 +19,10 @@ import type { SkillType } from "@/lib/types/sections";
 const colors = ["#FDE68A", "#A7F3D0", "#BFDBFE"];
 
 const SkillsCard = ({
-  icon,
   title,
   desc,
   idx,
-}: SkillType & { idx: number }) => {
+}: Omit<SkillType, "icon"> & { idx: number }) => {
   return (
     <div className="flex items-start gap-5 text-slate-900 dark:text-slate-200">
       <div className="flex items-center justify-center w-16 h-16 shrink-0">

@@ -1,8 +1,8 @@
 "use client";
-import { removeKeys } from "@/lib/utils/helper";
 
 import { type MotionProps, motion } from "framer-motion";
 import Link from "next/link";
+import { removeKeys } from "@/lib/utils/helper";
 
 interface DefaultProps {
 	children: React.ReactNode | string;
@@ -81,7 +81,7 @@ const Button = (props: Props & MotionProps) => {
 		);
 	}
 
-	return <></>;
+	return null;
 };
 
 export default Button;

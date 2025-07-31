@@ -1,6 +1,5 @@
-import XIcon from "@/components/ui/Icons";
-
 import type { SVGProps } from "react";
+import XIcon from "@/components/ui/Icons";
 
 export const iconMap: Record<
 	string,

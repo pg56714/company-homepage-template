@@ -7,7 +7,7 @@ import type { BreakpointType } from "../types";
 const fullConfig = resolveConfig(tailwindConfig);
 
 export function cn(...inputs: ClassValue[]) {
-	return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs));
 }
 
 /**
@@ -17,9 +17,9 @@ export function cn(...inputs: ClassValue[]) {
  */
 
 export const getBreakpointsWidth = (breakpoint: BreakpointType) => {
-	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	// @ts-ignore
-	return +fullConfig?.theme?.screens[breakpoint].slice(0, -2);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return +fullConfig?.theme?.screens[breakpoint].slice(0, -2);
 };
 
 /**
@@ -27,7 +27,11 @@ export const getBreakpointsWidth = (breakpoint: BreakpointType) => {
  * @returns {String} Unique id format id123..
  */
 
-export const getId = () => `id${Math.random().toString(16).slice(2)}`;
+let idCounter = 0;
+export const getId = () => {
+  idCounter += 1;
+  return `id${idCounter}`;
+};
 
 /**
  * Modifies the given object by removing the given keys
@@ -36,7 +40,7 @@ export const getId = () => `id${Math.random().toString(16).slice(2)}`;
  */
 
 export const removeKeys = <T>(object: T, keys: Array<keyof T>) => {
-	for (const field of keys) {
-		delete object[field];
-	}
+  for (const field of keys) {
+    delete object[field];
+  }
 };
