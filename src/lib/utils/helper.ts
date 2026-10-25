@@ -18,7 +18,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const getBreakpointsWidth = (breakpoint: BreakpointType) => {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	// @ts-ignore
+	// @ts-expect-error
 	return +fullConfig?.theme?.screens[breakpoint].slice(0, -2);
 };
 
