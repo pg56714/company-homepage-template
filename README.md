@@ -2,6 +2,8 @@
 
 A modern, responsive homepage template for companies and businesses built with Next.js, TypeScript, and Tailwind CSS.
 
+![Homepage](assets/homepage.png)
+
 ## How to use
 
 1. Install dependencies
